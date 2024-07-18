@@ -1,176 +1,138 @@
 /* import Google Font - Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-*{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: 'Poppins', sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-body{
-display: flex;
-align-items: center;
-justify-content: center;
-min-height: 100vh;
-background: lightblue
+/* Content utama flex kanan kiri */
+.main-content {
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+
 }
 
+.section-kiri {
+    width: 50%;
+    padding: 30px;
+}
+
+.section-kanan {
+    width: 50%;
+    padding: 30px;
+}
+/* Content utama flex kanan kiri - END */
+
+ /* Align text artikel menjadi justify */
+p {
+    text-align: justify;
+}
+
+#pembukaan {
+    text-align: justify;
+}
+ /* Align text artikel menjadi justify - END */
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: lightblue;
+}
 
 .box {
- width:500px;
- background: #fafafa;
- border: radius 12px;
- text-align: center;
- box-shadow: 2px 2px 20px 5px rgba(0,0,0,0.5);
-
+    width: 500px;
+    background: #fafafa;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, 0.5);
 }
 
-
 h1 {
-    color: rgb(0, 0, 0, 0.7);
+    color: rgba(0, 0, 0, 0.7);
     font-weight: bold;
     font-size: 36px;
     padding: 30px 0;
-
 }
 
+.content {
+    padding: 0 30px;
+}
 
+.input, .inputH, .inputW {
+    background: #fff;
+    box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
 
-    .content {
-        padding: 0 30px;
-    
-    }
+.input label, .inputH label, .inputW label {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 20px;
+}
 
-    .input {
-        background: #fff;
-        box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
-        border-radius: 12px;
-        padding: 20px 0;
-        margin-bottom: 20px;
-    }
+.input input, .inputH input, .inputW input {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #4f7df9;
+    width: 50%;
+    text-align: center;
+    font-size: 28px;
+    font-family: 'Nunito', sans-serif;
+}
 
+button.calculate {
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
+    color: #fff;
+    background: rgb(97, 138, 254);
+    font-size: 16px;
+    border-radius: 7px;
+    padding: 12px 0;
+    width: 100%;
+    outline: none;
+    border: none;
+    transition: all 0.5s;
+}
 
-    .input label {
-        display: block;
-        font-size: 18px;
-        font-weight: 600;
-        color: #000;
-        margin-bottom: 20px;
-    }
-    .input input {
-        outline: none;
-        border: none;
-        border-bottom: 1px solid #4f7df9;
-        width: 50%;
-        text-align: center;
-        font-size: 28px;
-        font-family: "Nunito", sans-serif;
-    }
+button.calculate:hover {
+    background: #0044ff;
+}
 
+.result {
+    padding: 10px 20px;
+}
 
+.result p {
+    font-weight: 600;
+    font-size: 22px;
+    color: #000;
+    margin-bottom: 15px;
+}
 
-    .inputW {
-        background: #fff;
-        box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
-        border-radius: 12px;
-        padding: 10px 0;
-        margin-bottom: 20px
-    }
+.result #result {
+    font-size: 36px;
+    font-weight: 900;
+    color: #4f7df9;
+    background-color: #eaeaea;
+    display: inline-block;
+    padding: 7px 20px;
+    border-radius: 55px;
+    margin-bottom: 25px;
+}
 
-
-    .inputW label {
-        display: block;
-        font-size: 18px;
-        font-weight:600;
-        color: #000;
-        margin-bottom: 20px;
-    }
-    .inputW input {
-        outline: none;
-        border: none;
-        border-bottom: 1px solid #4f7df9;
-        width: 50%;
-        text-align: center;
-        font-size: 28px;
-        font-family: "Nunito", sans-serif;
-    }
-
-    .inputH {
-        background: #fff;
-        box-shadow:0px 0px 95px -30px rgba(0, 0, 0, 0.15);
-        border-radius: 12px;
-        padding: 10px 0;
-        margin-bottom: 20px;
-        margin-right: 20px;
-    }
-
-
-    .inputH label {
-        display: block;
-        font-size: 18px;
-        font-weight: 600;
-        color: #000;
-        margin-bottom: 20px;
-    }
-    .inputH input {
-        outline: none;
-        border: none;
-        border-bottom: 1px solid #4f7df9;
-        width: 50%;
-        text-align: center;
-        font-size: 28px;
-        font-family: "Nanito", sans-serif;
-    }
-
-
-    button.calculate {
-        cursor: pointer;
-        font-family: "Nunito", sans-serif;
-        color: #fff;
-        background: rgb(97,138,254,1);
-        font-size: 16px;
-        border-radius: 7px;
-        padding: 12px 0;
-        width: 100%;
-        outline: none;
-        border: none;
-        transition: all 0.5s;
-    }
-    button.calculate:hover {
-        background: #0044ff;
-    }
-
-
-
-    .result {
-        padding: 10px 20px;
-    }
-    .result p {
-        font-weight: 600;
-        font-size: 22px;
-        color: #000;
-        margin-bottom: 15px;
-    }
-    .result #result {
-        font-size: 36px;
-        font-weight: 900;
-        color: #4f7df9;
-        background-color: #eaeaea;
-        display: inline-block;
-        padding: 7px 20px;
-        border-radius: 55px;
-        margin-bottom: 25px;
-    }
-    #comment {
-        color: #4f7df9;
-        font-weight: 800;
-    }
-
-    .comment {
-        display: none;
-        border: dashed 1px;
-        border-radius: 7px;
-        padding: 5px;
+.comment {
+    display: none;
+    border: dashed 1px;
+    border-radius: 7px;
+    padding: 5px;
 }
 
 .footer {
@@ -190,7 +152,7 @@ h1 {
 }
 
 .footer-text:hover {
-    color: rgba(40, 40, 40, 1); 
+    color: rgba(40, 40, 40, 1);
 }
 
 .gender {
@@ -210,7 +172,6 @@ h1 {
     display: block;
     position: relative;
     padding-left: 35px;
-    /* margin-bottom: 12px; */
     margin-top: 7px;
     cursor: pointer;
     font-size: 22px;
@@ -263,13 +224,12 @@ h1 {
 /* Style the indicator (dot/circle) */
 .gender .container .checkmark:after {
     top: 9px;
-   left: 9px;
-   width: 8px;
-   height: 8px;
-   border-radius:50%;
-   background: white;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
 }
-/* END Style for Radio */
 
 .containerHW {
     display: flex;
@@ -277,25 +237,20 @@ h1 {
     align-items: center;
 }
 
-
-
-
-
 /* The Modal (background) */
 .modal {
-    display: none; /*Hidden by default */
+    display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     padding-top: 100px; /* Location of the box */
     left: 0;
     top: 0;
-    width: 100%; /* full width */
-    height: 100%; /* full height */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
     padding-top: 300px;
-
 }
 
 /* Modal Content */
@@ -305,7 +260,7 @@ h1 {
     padding: 20px;
     border: 1px solid #888;
     width: 600px;
-    border-radius:10px;
+    border-radius: 10px;
     box-shadow: #393c76 -1px 2px 2px 1px;
 }
 
@@ -327,7 +282,7 @@ h1 {
 
 /* The Close Button */
 .close {
-    color: #aaaaa;
+    color: #aaaaaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -339,28 +294,21 @@ h1 {
     color: #d41111;
 }
 
-
-
-
-
 .linkDownload {
     position: fixed;
     background-color: #d12322;
     margin: 20px;
     padding: 10px 10px;
-    left: -0px;
+    left: 0px;
     border-radius: 5px;
-    bottom: -0px;
+    bottom: 0px;
     font-size: 16px;
     font-weight: 400;
     color: #fff;
     text-decoration: none;
     text-transform: capitalize;
     transition: all 0.43s ease-in-out;
-
-
 }
-
 
 .linkDownload i {
     padding-left: 7px;
@@ -371,39 +319,23 @@ h1 {
     background-color: black;
 }
 
-
-@media (max-width: 700px){
-
-
+@media (max-width: 700px) {
     .box {
         width: 380px;
     }
-
-
-
-
     .input label {
-
         font-size: 18px;
     }
-
     .inputH label, .inputW label {
         font-size: 14px;
     }
-
-
-    .input input, .inputH input, .inputW input{
+    .input input, .inputH input, .inputW input {
         font-size: 24px;
     }
-
-
     .modal-content {
-
         width: 380px;
     }
-
-    .linkDownload{
-        display:none;
+    .linkDownload {
+        display: none;
     }
-    
 }
